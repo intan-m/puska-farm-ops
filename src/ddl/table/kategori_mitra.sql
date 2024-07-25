@@ -5,6 +5,7 @@ CREATE TABLE kategori_mitra (
   PRIMARY KEY (id)
 );
 
+
 -- Inject
 COPY kategori_mitra
 FROM '/seed/csv/kategori_mitra.csv'
@@ -13,3 +14,7 @@ WITH (
   DELIMITER ';',
   HEADER TRUE
 );
+
+
+-- Restart Sequence
+ALTER SEQUENCE history_kelahiran_kematian_id_seq RESTART WITH 10;

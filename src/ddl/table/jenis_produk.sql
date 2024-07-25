@@ -7,6 +7,7 @@ CREATE TABLE jenis_produk (
   PRIMARY KEY (id)
 );
 
+
 -- Inject
 COPY jenis_produk
 FROM '/seed/csv/jenis_produk.csv'
@@ -15,3 +16,7 @@ WITH (
   DELIMITER ';',
   HEADER TRUE
 );
+
+
+-- Restart Sequence
+ALTER SEQUENCE history_kelahiran_kematian_id_seq RESTART WITH 7;

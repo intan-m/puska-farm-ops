@@ -6,6 +6,7 @@ CREATE TABLE wilayah (
   PRIMARY KEY (id)
 );
 
+
 -- Inject
 COPY wilayah
 FROM '/seed/csv/wilayah.csv'
@@ -14,3 +15,7 @@ WITH (
   DELIMITER ';',
   HEADER TRUE
 );
+
+
+-- Restart Sequence
+ALTER SEQUENCE wilayah_id_seq RESTART WITH 91282;
