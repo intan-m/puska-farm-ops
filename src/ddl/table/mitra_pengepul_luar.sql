@@ -19,6 +19,7 @@ CREATE TABLE mitra_pengepul_luar (
   PRIMARY KEY (id)
 );
 
+
 -- Inject
 COPY mitra_pengepul_luar
 FROM '/seed/csv/mitra_pengepul_luar.csv'
@@ -27,3 +28,7 @@ WITH (
   DELIMITER ';',
   HEADER TRUE
 );
+
+
+-- Restart Sequence
+ALTER SEQUENCE mitra_pengepul_luar_id_seq RESTART WITH 17;
